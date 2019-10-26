@@ -1,0 +1,188 @@
+/* Imported files */
+@import "reset";
+
+/* Variables and values defined. */
+$bgcolors: #ffc436 #ff532c #6693ac #ffdb00 #ff9a00;
+$primary: #ff6600;
+$basecolor: #17465d;
+$size: 1.5em;
+
+body {
+  background-color: $basecolor;
+  color: $basecolor;
+  font-family: "Century Gothic", Tahoma, Georgia;
+  line-height: $size;
+}
+
+header,
+main {
+  margin: 2px;
+}
+
+header {
+  background-image: linear-gradient(to top right, $primary, #ffff1a);
+  text-align: center;
+}
+
+div, 
+h1, 
+p {
+  padding: 20px;
+}
+
+div {
+  text-align: center;
+  border-bottom: thin solid $basecolor;
+}
+
+h1 {
+  font: {
+    size: 2em;
+    variant: small-caps;
+  }
+  line-height: 1em;
+  letter-spacing: 1px;
+  padding-bottom: 0px;
+}
+
+p {
+  padding-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: $basecolor;
+}
+
+span {
+  font: {
+    size: $size;
+    variant: small-caps;
+  }
+}
+
+/* Hover effects */
+.link-1, .link-3 {
+  transition: background 0.2s, color 0.2s, border-radius 0.2s;
+}
+
+.link-4 {
+  transition: padding 0.3s;
+}
+
+.link-1:hover {
+  background: linear-gradient(rgba(288, 288, 288, 0), rgba(288, 288, 288, 0.4), rgba(288, 288, 288, 0));
+}
+
+.link-2:hover, .link-2:hover a {
+  background: darken(#ff532c, 5%);
+  color: lighten(#ff532c, 15%);
+  font-family: Tahoma, sans-serif;  
+  border-radius: 0px 60px;
+}
+
+.link-3:hover {
+  background: invert(#6693ac);
+  font-family: Georgia, serif; 
+  border-radius: 25px;
+}
+
+.link-4:hover, .link-4:hover a {
+  background: adjust-hue(#ffdb00, 80deg);
+  color: white;
+  font-family: "Trebuchet MS";
+  text: {
+    decoration: underline;
+    align: right;
+  }
+  padding-top: 5px;
+}
+
+.link-5:hover {
+  background: radial-gradient(orange, $basecolor);
+  font-family: Calibri, sans-serif;
+  text-align: left;
+}
+
+@for $i from 1 through 5 {
+  .link-#{$i} {
+    background-color: nth($bgcolors, $i);
+  }
+}
+
+/* Media queries */
+@media only screen and (min-width: 360px) {
+  main {
+    display: grid;
+    grid-gap: 12px 2px;
+    grid-template-columns: auto auto;
+  }
+
+  header, 
+  main {  
+    margin: 12px 2px;
+  }
+
+  div {
+    border: none;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+}
+
+@media only screen and (min-width: 530px) {
+  main {
+    grid-template-columns: auto auto auto;
+  }
+
+  h1,
+  p {
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 4em;
+    padding-bottom: 0px;
+  }
+
+  p {
+    padding-top: 10px;
+  }
+}
+
+@media only screen and (min-width: 870px) {
+  main {
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+
+  .link-2:hover, .link-2:hover a {
+    vertical-align: sub;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  main {
+    grid-template-columns: auto auto auto auto auto auto auto;
+  }
+
+  div {
+    padding: 30px;
+  }
+ 
+  h1, 
+  p {
+    padding: 45px;
+  }
+
+  h1 {
+    font-size: 5em;
+    padding-bottom: 0px;
+  }
+
+  p {
+    padding-top: 20px;
+  }
+}
