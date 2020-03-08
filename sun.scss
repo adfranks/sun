@@ -5,11 +5,12 @@
 $bgcolors: #ffc436 #ff532c #6693ac #ffdb00 #ff9a00;
 $primary: #ff6600;
 $basecolor: #17465d;
+$alternatebase: #00001a;
 $size: 1.5em;
 
 body {
-  background-color: $basecolor;
-  color: $basecolor;
+  background: $basecolor url("wnba-blur2.jpg") center/cover no-repeat fixed;
+  color: $alternatebase;
   font-family: "Century Gothic", Tahoma, Georgia;
   line-height: $size;
 }
@@ -20,19 +21,31 @@ main {
 }
 
 header {
-  background-image: linear-gradient(to top right, $primary, #ffff1a);
+  background-image: linear-gradient(to bottom left, $primary, #ffff1a);
   text-align: center;
 }
 
+header {
+  p {
+    text-align: right;
+    background-image: linear-gradient(to top right, $primary, #ffff1a);
+    font-size: 1.2em;
+  }
+}
+
 a, 
-h1, 
+h1 {
+  padding: 15px;
+}
+ 
 p {
   padding: 20px;
+  padding-top: 10px;
 }
 
 a {
   display: block;
-  color: $basecolor;
+  color: $alternatebase;
   text: {
     decoration: none;
     align: center;
@@ -48,10 +61,7 @@ h1 {
   line-height: 1em;
   letter-spacing: 1px;
   padding-bottom: 0px;
-}
-
-p {
-  padding-top: 10px;
+  border-bottom: thick solid $alternatebase;
 }
 
 span {
@@ -99,7 +109,7 @@ span {
 }
 
 .link-5:hover {
-  background: radial-gradient(orange, $basecolor);
+  background: radial-gradient(orange, $alternatebase);
   font-family: Calibri, sans-serif;
   text-align: left;
 }
@@ -144,8 +154,8 @@ span {
   }
 
   h1 {
-    font-size: 4em;
-    padding-bottom: 0px;
+    font-size: 3em;
+    padding-bottom: 10px;
   }
 
   p {
@@ -157,6 +167,14 @@ span {
   main {
     grid-template-columns: auto auto auto auto auto auto;
   }
+
+  h1 {
+    font-size: 4em;
+    padding-bottom: 0px;
+  }
+
+  header p {font-size: 1.5em;}
+
 
   .link-2:hover, .link-2:hover a {
     vertical-align: sub;
@@ -179,6 +197,32 @@ span {
 
   h1 {
     font-size: 5em;
+    padding-bottom: 0px;
+  }
+
+  p {
+    padding-top: 20px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  main {font-size: 1.5em;}
+  header p {font-size: 2em;}
+}
+@media only screen and (min-width: 2000px) {
+  main {
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+
+  header p {padding-top: 1.2em;}
+
+  h1,
+  p, 
+  a {
+    padding: 80px;
+  }
+
+  h1 {
+    font-size: 7em;
     padding-bottom: 0px;
   }
 
