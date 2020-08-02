@@ -11,7 +11,7 @@ $size: 1.5em;
 body {
   background: $basecolor url("wnba-blur2.jpg") center/cover no-repeat fixed;
   color: $alternatebase;
-  font-family: "Century Gothic", Tahoma, Georgia;
+  font-family: "Century Gothic", Tahoma, Georgia, serif;
   line-height: $size;
 }
 
@@ -94,7 +94,6 @@ span {
 
 .link-3:hover {
   background: invert(#6693ac);
-  font-family: Georgia, serif; 
   border-radius: 25px;
 }
 
@@ -102,7 +101,6 @@ span {
 .link-4:hover a {
   background: adjust-hue(#ffdb00, 80deg);
   color: white;
-  font-family: "Trebuchet MS";
   text: {
     decoration: underline;
     align: right;
