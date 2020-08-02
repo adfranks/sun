@@ -82,7 +82,7 @@ span {
 }
 
 .link-1:hover {
-  background: linear-gradient(rgba(288, 288, 288, 0), rgba(288, 288, 288, 0.4), rgba(288, 288, 288, 0));
+  background: linear-gradient(rgba(288, 288, 288, 0.2), rgba(288, 288, 288, 0.7), rgba(288, 288, 288, 0.2));
 }
 
 .link-2:hover, 
@@ -90,8 +90,6 @@ span {
   background: darken(#ff532c, 5%);
   color: #ffc0b3;
   border-radius: 0px 60px;
-  text-align: justify;
-  text-justify: inter-word;
 }
 
 .link-3:hover {
@@ -188,7 +186,7 @@ span {
   .row-6 {-ms-grid-row: 6;}
 }
 
-@media only screen and (min-width: 870px) {
+@media only screen and (min-width: 960px) {
   body {
     background: $basecolor url("wnba-blur19.jpg") center/cover no-repeat fixed;
   }
@@ -207,10 +205,12 @@ span {
 
   .link-2:hover, .link-2:hover a {
     vertical-align: sub;
+    text-align: justify;
+    text-justify: inter-word;
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1366px) {
   section {
     grid-template-columns: auto auto auto auto auto auto auto;
   }
