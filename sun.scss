@@ -11,7 +11,7 @@ $size: 1.5em;
 body {
   background: $basecolor url("wnba-blur2.jpg") center/cover no-repeat fixed;
   color: $alternatebase;
-  font-family: "Century Gothic", Tahoma, Georgia, serif;
+  font-family: "Century Gothic", Tahoma, Georgia;
   line-height: $size;
 }
 
@@ -82,25 +82,26 @@ span {
 }
 
 .link-1:hover {
-  background: linear-gradient(rgba(288, 288, 288, 0.2), rgba(288, 288, 288, 0.7), rgba(288, 288, 288, 0.2));
+  background: linear-gradient(rgba(288, 288, 288, 0), rgba(288, 288, 288, 0.4), rgba(288, 288, 288, 0));
 }
 
-.link-2:hover, 
-.link-2:hover a {
+.link-2:hover, .link-2:hover a {
   background: darken(#ff532c, 5%);
-  color: #ffc0b3;
+  color: lighten(#ff532c, 15%);
+  font-family: Tahoma, sans-serif;  
   border-radius: 0px 60px;
 }
 
 .link-3:hover {
   background: invert(#6693ac);
+  font-family: Georgia, serif; 
   border-radius: 25px;
 }
 
-.link-4:hover, 
-.link-4:hover a {
+.link-4:hover, .link-4:hover a {
   background: adjust-hue(#ffdb00, 80deg);
   color: white;
+  font-family: "Trebuchet MS";
   text: {
     decoration: underline;
     align: right;
@@ -110,6 +111,7 @@ span {
 
 .link-5:hover {
   background: radial-gradient(orange, $alternatebase);
+  font-family: Calibri, sans-serif;
   text-align: left;
 }
 
@@ -185,26 +187,23 @@ span {
 }
 
 @media only screen and (min-width: 960px) {
-  body {
-    background: $basecolor url("wnba-blur19.jpg") center/cover no-repeat fixed;
-  }
-
   section {
     grid-template-columns: auto auto auto auto auto auto;
   }
 
   h1 {
-    font-size: 4em;
-    padding-bottom: 0px;
+    font-size: 4.5em;
+    padding: 100px 40px 40px 40px;
   }
 
-  header p {font-size: 1.5em;}
+  header p {
+    font-size: 1.5em;
+    padding: 40px 40px 100px 40px;
+  }
 
 
   .link-2:hover, .link-2:hover a {
     vertical-align: sub;
-    text-align: justify;
-    text-justify: inter-word;
   }
 }
 
@@ -217,18 +216,16 @@ span {
     padding: 30px;
   }
  
-  h1, 
-  p {
-    padding: 45px;
-  }
-
   h1 {
-    font-size: 5em;
-    padding-bottom: 0px;
+    font-size: 6em;
+  }
+  
+  header p {
+    padding: 40px 40px 100px 40px;
   }
 
   p {
-    padding-top: 20px;
+    padding: 20px 45px 45px 45px;
   }
 }
 @media only screen and (min-width: 1600px) {
@@ -236,19 +233,11 @@ span {
   header p {font-size: 2em;}
 }
 @media only screen and (min-width: 2000px) {
-  body {
-    background: $basecolor url("wnba-blur25.jpg") center/cover no-repeat fixed;
-  }
-
   section {
     grid-template-columns: auto auto auto auto auto auto;
   }
 
-  header {
-    p {
-      padding-top: 1.2em;
-    }
-  }
+  header p {padding-top: 1.2em;}
 
   h1,
   p, 
@@ -258,15 +247,14 @@ span {
 
   h1 {
     font-size: 7em;
-    padding-bottom: 0px;
   }
 
   p {
     padding-top: 20px;
   }
-}
 @media only screen and (min-width: 2560px) {
   body {
-    background: $basecolor url("wnba-blur78.jpg") center/cover no-repeat fixed;
+    background: #17465d url("wnba-blur78.jpg") center/cover no-repeat fixed;
+    font-size: 1.7em;
   }
 }
