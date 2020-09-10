@@ -129,8 +129,8 @@ span {
     grid-template-columns: auto auto;
   }
 
-  header, 
-  section {  
+  header,
+  section {
     margin: 12px 2px;
   }
 
@@ -141,9 +141,7 @@ span {
   h1 {
     font-size: 2.5em;
   }
-
 }
-
 @media only screen and (min-width: 530px) {
   section {
     display: -ms-grid;
@@ -185,61 +183,52 @@ span {
   .row-5 {-ms-grid-row: 5;}
   .row-6 {-ms-grid-row: 6;}
 }
-
 @media only screen and (min-width: 960px) {
+  body {
+    background: #17465d url("wnba-blur19.jpg") center/cover no-repeat fixed;
+  }
+
   section {
     grid-template-columns: auto auto auto auto auto auto;
   }
 
-  h1 {
-    font-size: 4.5em;
-    padding: 80px 40px 40px 40px;
-  }
-
-  header p {
-    font-size: 1.5em;
-    padding: 40px 40px 80px 40px;
-  }
-
-
   .link-2:hover, .link-2:hover a {
     vertical-align: sub;
+    text-align: justify;
+    text-justify: inter-word;
   }
 }
-
 @media only screen and (min-width: 1366px) {
   section {
     grid-template-columns: auto auto auto auto auto auto auto;
   }
 
+  h1 {
+    font-size: 4em;
+  }
+
   a {
     padding: 30px;
   }
- 
-  h1 {
-    font-size: 6em;
-  }
-  
-  header p {
-    padding: 40px 40px 80px 40px;
-  }
-
-  p {
-    padding: 20px 45px 45px 45px;
-  }
 }
 @media only screen and (min-width: 1600px) {
+  body {line-height: 1.2;}
   section {font-size: 1.5em;}
+  h1 {font-size: 5em;}
   header p {font-size: 2em;}
 }
 @media only screen and (min-width: 2000px) {
+  body {
+    background: #17465d url("wnba-blur25.jpg") center/cover no-repeat fixed;
+  }
+
   section {
     grid-template-columns: auto auto auto auto auto auto;
   }
 
   header p {padding-top: 1.2em;}
 
-  h1,
+ 
   p, 
   a {
     padding: 80px;
@@ -247,11 +236,13 @@ span {
 
   h1 {
     font-size: 7em;
+    padding: 50px 50px 20px 50px;
   }
 
   p {
     padding-top: 20px;
   }
+}
 @media only screen and (min-width: 2560px) {
   body {
     background: #17465d url("wnba-blur78.jpg") center/cover no-repeat fixed;
